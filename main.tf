@@ -1,8 +1,10 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.51.0"
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "demo-atharvk-org"
+
+    workspaces {
+      name = "terraform-sentinel-example"
     }
   }
 }
