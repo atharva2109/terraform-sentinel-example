@@ -11,3 +11,8 @@ variable "ip_address" {
 variable "vpc_id" {
   type = string
 }
+
+variable "bucket_name" {
+  type = string
+  description = "Name of the S3 Bucket"
+}
